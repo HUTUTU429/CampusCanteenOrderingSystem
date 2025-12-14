@@ -17,8 +17,12 @@
                     <div class="card-header">
                         <h5><b>{{ j.dish_name }}</b></h5>
                     </div>
+                    {% if j.dish_photo %}
                     <img class="card-img-top" src="{{ j.dish_photo.url }}" alt="Card image cap" height="180px"
                          width="320px">
+                    {% else %}
+                    <img class="card-img-top" src="https://via.placeholder.com/320x180?text=暂无图片" alt="Card image cap" height="180px" width="320px">
+                    {% endif %}
                     <div class="card-body d-flex flex-column" data-cat="{{ i.dish_category }}">
                         <p class="card-text">{{ j.dish_detail }}</p>
                         <div class="mt-auto">

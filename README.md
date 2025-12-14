@@ -66,4 +66,30 @@ django_CCOS
          └── my_order.html		//我的订单
 ```
 
+## 快速开始 :rocket:
+
+1. 初始化：
+
+   - 克隆本项目 `git clone`
+
+   - 卸载原依赖 `pip uninstall -y -r requirement.txt`
+
+   - 配置新依赖 `pip install -r requirements.txt`
+
+2. 数据库准备：
+
+   - 打开 MySQL Workbench 服务器，创建本地数据库 `create database django_CCOS`
+
+   - 项目参数修改：打开 settings.py 配置文件，找到 MySQL 自定义参数，修改为你自己的配置
+
+4. 项目启动，进入项目 `django_CCOS` 目录，执行：
+   - `python manage.py makemigrations`
+   - `python manage.py migrate`
+   - `python manage.py runserver`
+   
+5. 前端访问：http://127.0.0.1:8000
+
+5. 后台访问：http://127.0.0.1:8000/admin
+   - 创建管理员：`python manage.py createsuperuser`
+   - 自行添加食堂、窗口、菜品，否则初始不显示
 

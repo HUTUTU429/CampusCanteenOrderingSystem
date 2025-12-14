@@ -11,7 +11,11 @@
                     <div class="card-header">
                         <h5><b>{{ i.canteen_name }}</b></h5>
                     </div>
+                    {% if i.canteen_photo %}
                     <img class="card-img-top" src="{{ i.canteen_photo.url }}" alt="Card image cap" height="180px" width="320px">
+                    {% else %}
+                    <img class="card-img-top" src="https://via.placeholder.com/320x180?text=暂无图片" alt="Card image cap" height="180px" width="320px">
+                    {% endif %}
                     <div class="card-header" float="left">
                         <h5><b>{{ i.canteen_active }}</b></h5>
                         <h5><b>卫生等级：{{ i.sanitation_level }}</b></h5>
